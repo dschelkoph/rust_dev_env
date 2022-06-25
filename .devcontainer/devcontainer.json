@@ -1,0 +1,32 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.205.2/containers/python-3
+{
+	"dockerComposeFile": [
+		"docker-compose.yaml"
+	],
+	"name": "${localWorkspaceFolderBasename}",
+	"service": "devcontainer",
+	"workspaceFolder": "/workspace",
+	"settings": {
+		"editor.codeActionsOnSave": {
+			"source.organizeImports": true
+		},
+		"editor.formatOnSave": true,
+		"files.autoSave": "afterDelay",
+		"files.exclude": {
+			"**/.git": true,
+			"**/.svn": true,
+			"**/.hg": true,
+			"**/CVS": true,
+			"**/.DS_Store": true,
+			"**/Thumbs.db": true,
+		},
+		"files.trimTrailingWhitespace": true,
+	},
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"rust-lang.rust-analyzer",
+		"ritwickdey.liveserver",
+		"tamasfe.even-better-toml"
+	],
+}
